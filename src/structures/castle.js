@@ -26,12 +26,15 @@ const B = {
 };
 
 const LAKE = 64;      // lake half-width
-const FLOOR = -6;     // lake bed
+const LAKE_DEPTH = 6;
+const WORLD_BOTTOM = -64;
+let FLOOR = -LAKE_DEPTH; // lake bed; raised in shallow spots like flat worlds (ground at y=-61)
 const SKY = 80;       // clear everything up to here
 const PLATEAU = 14;   // height of the castle plateau
 const F = PLATEAU + 1; // first floor of the castle
 
 export function buildCastle(origin) {
+  FLOOR = Math.max(-LAKE_DEPTH, WORLD_BOTTOM - origin.y);
   const b = new Builder(origin);
   b.raw('say §6Building the castle... stand by!');
 

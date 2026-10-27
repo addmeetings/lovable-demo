@@ -100,3 +100,12 @@ test('castle never exceeds the /fill volume limit', () => {
     }
   }
 });
+
+test('castle fits above the world bottom in a flat world', () => {
+  // Flat worlds: grass at y=-61, player feet at y=-60, so the lake surface is y=-61.
+  const ys = buildCastle({ x: 0, y: -61, z: 0 }).phases
+    .flatMap((p) => p.commands)
+    .flatMap((c) => [...c.matchAll(/^(?:fill|setblock) \S+ (\S+) \S+(?: \S+ (\S+) \S+)?/g)])
+    .flatMap((m) => [m[1], m[2]].filter(Boolean).map(Number));
+  assert.ok(Math.min(...ys) >= -64, `lowest block y=${Math.min(...ys)}`);
+});

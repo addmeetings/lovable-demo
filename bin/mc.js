@@ -58,7 +58,7 @@ async function build(name, args) {
 
   // The structure sits north of you; the lake's water surface is at your feet level - 1.
   const origin = { x: pos.x, y: pos.y - 1, z: pos.z - 70 };
-  if (origin.y + 80 > 319 || origin.y - 6 < -64) throw new Error('Stand somewhere between y=-58 and y=239 to build.');
+  if (origin.y + 80 > 319 || origin.y < -63) throw new Error('Stand somewhere between y=-62 and y=239 to build.');
 
   const builder = make(origin);
   console.log(`Building ${name} at ${pos.x} ${pos.y} ${pos.z}: ${builder.size} commands in ${builder.phases.length} phases`);

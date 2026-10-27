@@ -32,7 +32,7 @@ npm start
 
 1. Open Minecraft Education, then go to **Settings → General** and turn **Enable Websockets** on.
    If you see **Require Encrypted Websockets**, turn it off.
-2. Open (or create) a world with **Cheats / Activate Cheats** enabled. A flat or creative world works best.
+2. Open (or create) a Creative world with **Activate Cheats** enabled.
 3. Press `T` to open chat and type:
 
    ```
