@@ -1,0 +1,22 @@
+{
+  "name": "minecraft-edu-bridge",
+  "version": "1.0.0",
+  "description": "Backend bridge that lets a Mac terminal drive Minecraft Education Edition over its WebSocket (/connect) interface",
+  "type": "module",
+  "main": "src/server.js",
+  "bin": {
+    "mc": "bin/mc.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "cli": "node bin/mc.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "license": "MIT"
+}
