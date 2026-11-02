@@ -1,7 +1,7 @@
 # 3. Test protocol
 
 > **Important:** This protocol is a **template**. Expected results and criteria are set in advance.
-> All fields marked *"— fill in after the run —"* are completed **only after the real test** in ChatGPT/Langdock.
+> All fields marked *"— fill in after the run —"* are completed **only after the real test** in Claude/Langdock.
 > Until then: **no tests have been run.**
 
 ## Run details
@@ -10,7 +10,7 @@
 |---|---|
 | Date | — fill in after the run — |
 | Tester | — fill in after the run — |
-| Tool and model | — e.g. ChatGPT Custom GPT (model as shown in the UI) / Langdock assistant (model) — |
+| Tool and model | — e.g. Claude project on claude.ai (model as shown in the UI) / Langdock assistant (Claude model) — |
 | Prompt version | v1.0 |
 | Runs per case | 2 (each in a new chat) |
 

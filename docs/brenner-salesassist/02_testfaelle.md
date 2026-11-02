@@ -1,7 +1,7 @@
 # 2. Testfälle (vorbereitet, noch nicht ausgeführt)
 
 > **Status:** Die drei Fälle sind **vorbereitet**. Sie sind fiktiv, enthalten aber realistische Angaben aus dem SHK-Vertrieb.
-> Sie wurden **noch nicht** in ChatGPT/Langdock ausgeführt. Die Ergebnisse werden in `03_testprotokoll.md` festgehalten.
+> Sie wurden **noch nicht** in Claude/Langdock ausgeführt. Die Ergebnisse werden in `03_testprotokoll.md` festgehalten.
 
 **Durchführung:** Jeden Fall in einem **neuen Chat** mit dem Assistenten einfügen, wörtlich wie unten angegeben. Jeden Fall **2×** ausführen, um zu prüfen, ob die Ergebnisse gleich bleiben.
 

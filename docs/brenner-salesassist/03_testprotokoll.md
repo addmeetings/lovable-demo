@@ -1,7 +1,7 @@
 # 3. Testprotokoll
 
 > **Wichtig:** Dieses Protokoll ist eine **Vorlage**. Soll-Ergebnisse und Prüfkriterien sind vorab festgelegt.
-> Alle Felder mit *„— nach Durchlauf ausfüllen —“* werden **erst nach dem echten Test** in ChatGPT/Langdock ergänzt.
+> Alle Felder mit *„— nach Durchlauf ausfüllen —“* werden **erst nach dem echten Test** in Claude/Langdock ergänzt.
 > Bis dahin gilt: **Es wurden noch keine Tests ausgeführt.**
 
 ## Durchlauf-Daten
@@ -10,7 +10,7 @@
 |---|---|
 | Datum | — nach Durchlauf ausfüllen — |
 | Tester/in | — nach Durchlauf ausfüllen — |
-| Werkzeug und Modell | — z. B. ChatGPT Custom GPT (Modell laut Oberfläche) / Langdock-Assistent (Modell) — |
+| Werkzeug und Modell | — z. B. Claude-Projekt auf claude.ai (Modell laut Oberfläche) / Langdock-Assistent (Claude-Modell) — |
 | Prompt-Version | v1.0 |
 | Läufe pro Fall | 2 (jeweils neuer Chat) |
 

@@ -18,7 +18,7 @@ Three outcomes matter most:
 
 | # | Component | File | Status |
 |---|---|---|---|
-| 1 | System prompt (ready to paste into ChatGPT / Langdock) | [`01_system-prompt.md`](01_system-prompt.md) | done |
+| 1 | System prompt (ready to paste into Claude / Langdock) | [`01_system-prompt.md`](01_system-prompt.md) | done |
 | 2 | Three test cases (standard, incomplete, sensitive) | [`02_test-cases.md`](02_test-cases.md) | prepared |
 | 3 | Test protocol (expected results, criteria, fields for real observations) | [`03_test-protocol.md`](03_test-protocol.md) | **to be filled in after the test run** |
 | 4 | Limits of the assistant | [`04_limits.md`](04_limits.md) | done |
@@ -26,13 +26,13 @@ Three outcomes matter most:
 | 6 | 90-minute workshop concept (one page) | [`06_workshop-concept.md`](06_workshop-concept.md) | done |
 | 7 | Success measurement: KPIs and evaluation after 4 weeks | [`07_success-measurement.md`](07_success-measurement.md) | done |
 
-> **Transparency note:** The three tests are **prepared test cases**. They have **not** yet been run in ChatGPT or Langdock.
+> **Transparency note:** The three tests are **prepared test cases**. They have **not** yet been run in Claude or Langdock.
 > The columns "actual result", "rating" and "action" in the test protocol are intentionally empty. They will be filled in only after
 > the real run, together with the prompt change log (v1.0 → v1.1 …).
 
 ## Steps to finish
 
-1. Paste prompt v1.0 into ChatGPT (Custom GPT) or Langdock (assistant), see setup in `01_system-prompt.md`.
+1. Paste prompt v1.0 into a Claude project or Langdock (assistant with a Claude model), see setup in `01_system-prompt.md`.
 2. Run each test case from `02_test-cases.md` **twice**, each in a new chat, to check that results are consistent.
 3. Copy the outputs verbatim into `03_test-protocol.md` and rate them.
 4. Adjust the prompt, bump the version and record the change in the change log. Re-run the affected tests.

@@ -18,7 +18,7 @@ Drei Ergebnisse stehen im Mittelpunkt:
 
 | # | Bestandteil | Datei | Status |
 |---|---|---|---|
-| 1 | System-Prompt (direkt in ChatGPT / Langdock einsetzbar) | [`01_system-prompt.md`](01_system-prompt.md) | fertig |
+| 1 | System-Prompt (direkt in Claude / Langdock einsetzbar) | [`01_system-prompt.md`](01_system-prompt.md) | fertig |
 | 2 | Drei Testfälle (Standard, unvollständig, sensibel) | [`02_testfaelle.md`](02_testfaelle.md) | fertig vorbereitet |
 | 3 | Testprotokoll (Soll, Prüfkriterien, Felder für echte Beobachtungen) | [`03_testprotokoll.md`](03_testprotokoll.md) | **muss nach dem Durchlauf ausgefüllt werden** |
 | 4 | Grenzen des Assistenten | [`04_grenzen.md`](04_grenzen.md) | fertig |
@@ -26,13 +26,13 @@ Drei Ergebnisse stehen im Mittelpunkt:
 | 6 | Workshop-Konzept 90 Minuten (eine Seite) | [`06_workshop-konzept.md`](06_workshop-konzept.md) | fertig |
 | 7 | Erfolgsmessung: KPIs und Evaluation nach 4 Wochen | [`07_erfolgsmessung.md`](07_erfolgsmessung.md) | fertig |
 
-> **Transparenzhinweis:** Die drei Tests sind **vorbereitete Testfälle**. Sie wurden noch **nicht** in ChatGPT oder Langdock ausgeführt.
+> **Transparenzhinweis:** Die drei Tests sind **vorbereitete Testfälle**. Sie wurden noch **nicht** in Claude oder Langdock ausgeführt.
 > Die Spalten „Ist-Ergebnis“, „Bewertung“ und „Maßnahme“ im Testprotokoll sind absichtlich leer. Sie werden erst nach dem echten Durchlauf
 > ausgefüllt, zusammen mit dem Änderungsprotokoll des Prompts (v1.0 → v1.1 …).
 
 ## Reihenfolge für die Fertigstellung
 
-1. Prompt v1.0 in ChatGPT (Custom GPT) oder in Langdock (Assistent) einfügen, siehe Einrichtung in `01_system-prompt.md`.
+1. Prompt v1.0 in ein Claude-Projekt oder in Langdock (Assistent mit Claude-Modell) einfügen, siehe Einrichtung in `01_system-prompt.md`.
 2. Jeden Testfall aus `02_testfaelle.md` **zweimal** in einem neuen Chat ausführen, um zu prüfen, ob die Ergebnisse gleich bleiben.
 3. Die Ergebnisse wörtlich in `03_testprotokoll.md` übernehmen und bewerten.
 4. Den Prompt anpassen, die Version hochzählen und die Änderung im Änderungsprotokoll festhalten. Die betroffenen Tests erneut ausführen.

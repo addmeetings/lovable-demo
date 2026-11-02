@@ -1,7 +1,7 @@
 # 2. Test cases (prepared, not yet run)
 
 > **Status:** The three cases are **prepared**. They are fictional but use realistic details from plumbing/heating (SHK) sales.
-> They have **not** yet been run in ChatGPT/Langdock. Results are recorded in `03_test-protocol.md`.
+> They have **not** yet been run in Claude/Langdock. Results are recorded in `03_test-protocol.md`.
 > **Note:** For the actual test, paste the **German** inputs from `../02_testfaelle.md`. The English inputs below are translations for reading.
 
 **How to run:** Paste each case into a **new chat** with the assistant, word for word. Run each case **twice** to check that results are consistent.

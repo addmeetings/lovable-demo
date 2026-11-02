@@ -2,20 +2,22 @@
 
 ## Einrichtung
 
-**ChatGPT (Custom GPT):** *GPT erstellen → Konfigurieren*
+**Claude (Projekt auf claude.ai):** *Projekte → Projekt erstellen*
 
-| Feld | Inhalt |
+| Feld / Schritt | Inhalt |
 |---|---|
-| Name | Brenner SalesAssist – Angebotsnachfassung |
+| Projektname | Brenner SalesAssist – Angebotsnachfassung |
 | Beschreibung | Schreibt in unter 3 Minuten professionelle Nachfassmails zu offenen Angeboten der Brenner Haustechnik GmbH. |
-| Anweisungen | Den kompletten Block unten, ab `# ROLLE`, einfügen |
-| Gesprächsstarter | 1) `Neue Nachfassmail – zeig mir die Eingabevorlage` · 2) `Zweite Erinnerung zu einem Angebot` · 3) `Kunde hat sich beschwert – heikle Nachfassmail` · 4) `Mach diese Mail kürzer` |
-| Fähigkeiten | Websuche **aus**, Bildgenerierung **aus**, Code Interpreter **aus**. Diese Funktionen sind nicht nötig und verringern die Vorhersagbarkeit. |
-| Datennutzung | Unter *Zusätzliche Einstellungen* die Option „Konversationsdaten zur Verbesserung unserer Modelle verwenden“ **deaktivieren** |
+| Projektanweisungen | *Anweisungen festlegen* → den kompletten Block unten, ab `# ROLLE`, einfügen |
+| Projektwissen | Für v1.0 leer lassen. Ab v1.1 optional Leistungsbeschreibungen, Signaturvorlage und Beispiele guter Mails hochladen (siehe `04_grenzen.md`). |
+| Einstieg für Nutzer | Claude-Projekte haben keine Gesprächsstarter-Buttons. Stattdessen öffnet man im Projekt einen neuen Chat und schreibt `Vorlage`. Der Assistent zeigt dann die Eingabevorlage. Diese Befehle stehen auf dem Spickzettel: `Vorlage` · `kürzer` · `förmlicher` · `2. Erinnerung` |
+| Funktionen | Websuche **aus**, erweitertes Denken **aus** (die Antworten kommen schneller und es ist nicht nötig). |
+| Teilen | Mit einem Team- oder Enterprise-Plan das Projekt mit der Gruppe „Vertrieb“ teilen. Mit einem Einzelkonto (Free/Pro) kann jede Person das Projekt mit denselben Anweisungen selbst anlegen. |
+| Datenschutz | Team/Enterprise: Chats werden standardmäßig nicht zum Training verwendet. Free/Pro: unter *Einstellungen → Datenschutz* die Option zur Modellverbesserung **deaktivieren**. Im Test nur fiktive Daten verwenden. |
 
-**Langdock (empfohlen für den Echtbetrieb, da bei Brenner bereits lizenziert):** *Assistenten → Neuer Assistent*. Name, Beschreibung
-und Gesprächsstarter wie oben eintragen, den Prompt in das Feld *Anweisungen* einfügen und den Assistenten für die Gruppe „Vertrieb“ freigeben.
-Optional kann eine Wissensdatei mit Leistungsbeschreibungen und Signaturvorlage ergänzt werden (ab v1.1, siehe `04_grenzen.md`).
+**Langdock (empfohlen für den Echtbetrieb, da bei Brenner bereits lizenziert):** *Assistenten → Neuer Assistent*. Als Modell ein
+Claude-Modell wählen. Dann verhält sich der Assistent wie im Test auf claude.ai. Den Prompt in das Feld *Anweisungen* einfügen,
+die Befehle von oben als Gesprächsstarter eintragen und den Assistenten für die Gruppe „Vertrieb“ freigeben.
 
 ---
 
@@ -109,6 +111,8 @@ private Telefonnummern Dritter), übernimm sie nicht in die Mail und weise unter
 kurz darauf hin, solche Daten künftig wegzulassen.
 
 # AUSGABEFORMAT (immer genau so, nichts davor)
+Gib die Mail direkt im Chat aus, nicht als Artefakt oder separates Dokument, damit sie sich
+mit einem Klick kopieren lässt.
 **Betreff:** <Betreff>
 
 <Mailtext mit Anrede, Absätzen und Grußformel; Signatur als [Ihr Name] / [Telefon], falls nicht angegeben>

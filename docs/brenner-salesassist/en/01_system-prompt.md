@@ -4,20 +4,22 @@
 
 ## Setup
 
-**ChatGPT (Custom GPT):** *Create a GPT → Configure*
+**Claude (project on claude.ai):** *Projects → Create project*
 
-| Field | Content |
+| Field / step | Content |
 |---|---|
-| Name | Brenner SalesAssist – Quote follow-up |
+| Project name | Brenner SalesAssist – Angebotsnachfassung |
 | Description | Writes professional follow-up emails on Brenner Haustechnik GmbH's open quotes in under 3 minutes. |
-| Instructions | The full block below, starting at `# ROLE` |
-| Conversation starters | 1) `New follow-up email – show me the input template` · 2) `Second reminder on a quote` · 3) `Customer complained – tricky follow-up` · 4) `Make this email shorter` |
-| Capabilities | Web search **off**, image generation **off**, code interpreter **off**. They are not needed and make the output less predictable. |
-| Data use | Under *Additional settings*, **turn off** "Use conversation data to improve our models" |
+| Project instructions | *Set project instructions* → paste the full **German** block from `../01_system-prompt.md`, starting at `# ROLLE` |
+| Project knowledge | Leave empty for v1.0. From v1.1, optionally upload service descriptions, a signature template and examples of good emails (see `04_limits.md`). |
+| How users start | Claude projects have no conversation-starter buttons. Instead, open a new chat in the project and type `Vorlage`. The assistant then shows the input template. These commands go on the cheat sheet: `Vorlage` · `kürzer` · `förmlicher` · `2. Erinnerung` |
+| Features | Web search **off**, extended thinking **off** (answers come faster and it isn't needed). |
+| Sharing | On a Team or Enterprise plan, share the project with the "Sales" group. On an individual account (Free/Pro), each person creates the project themselves with the same instructions. |
+| Privacy | Team/Enterprise: chats are not used for training by default. Free/Pro: **turn off** the model-improvement option under *Settings → Privacy*. Use only fictional data in the test. |
 
-**Langdock (recommended for live use, since Brenner already has licences):** *Assistants → New assistant*. Enter name, description and
-conversation starters as above, paste the prompt into *Instructions* and share the assistant with the "Sales" group.
-Optionally add a knowledge file with service descriptions and a signature template (from v1.1, see `04_limits.md`).
+**Langdock (recommended for live use, since Brenner already has licences):** *Assistants → New assistant*. Choose a Claude model.
+The assistant then behaves as it did in the claude.ai test. Paste the prompt into *Instructions*, add the commands above as
+conversation starters and share the assistant with the "Sales" group.
 
 ---
 
@@ -112,6 +114,8 @@ numbers of third parties), do not include it in the email and briefly note under
 that such data should be left out in future.
 
 # OUTPUT FORMAT (always exactly like this, nothing before it)
+Output the email directly in the chat, not as an artifact or separate document, so it can be
+copied with one click.
 **Subject:** <subject>
 
 <email body with salutation, paragraphs and closing; signature as [your name] / [phone] if not provided>
