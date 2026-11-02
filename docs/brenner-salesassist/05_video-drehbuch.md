@@ -18,7 +18,7 @@
 | **5:45–6:30** Drei Regeln | Folie mit 3 Punkten | „Zum Mitnehmen drei Regeln. Erstens: Fakten rein, Mail raus. Je konkreter Ihre Stichpunkte sind, desto besser wird die Mail. Zweitens: Immer lesen, bevor Sie senden, besonders den Teil ‚Bitte prüfen‘. Sie verschicken die Mail, nicht die KI. Drittens: Keine sensiblen Daten eingeben, also keine Bankdaten und keine Gesundheitsinfos. Name, Firma und Angebot reichen.“ |
 | **6:30–6:55** Abschluss | Folie: Link zum Assistenten, Ansprechpartner, Workshop-Termin | „Mein Vorschlag: Probieren Sie es diese Woche bei Ihren nächsten drei Nachfassmails aus. Den Link finden Sie unter dem Video. Was gut klappt und was nicht, sammeln wir im Workshop. Genau damit machen wir den Assistenten besser. Viel Erfolg!“ |
 
-**Sprechtext gesamt:** ca. 800 Wörter, also gut 6 Minuten Sprechzeit plus kurze Pausen. Puffer bis 7:00 ist vorhanden.
+**Sprechtext gesamt:** ca. 560 Wörter, also gut 4,5 Minuten Sprechzeit. Dazu kommen ca. 1,5–2 Minuten, in denen der Assistent antwortet und Ausgaben gezeigt werden. Gesamt ca. 6:30, Puffer bis 7:00 ist vorhanden.
 
 ## Folien (minimal)
 1. Titel: *Brenner SalesAssist – Nachfassmail in 3 Minuten*
