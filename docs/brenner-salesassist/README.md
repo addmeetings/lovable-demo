@@ -18,24 +18,25 @@ Drei Ergebnisse stehen im Mittelpunkt:
 
 | # | Bestandteil | Datei | Status |
 |---|---|---|---|
-| 1 | System-Prompt (direkt in Claude / Langdock einsetzbar) | [`01_system-prompt.md`](01_system-prompt.md) | fertig |
-| 2 | Drei Testfälle (Standard, unvollständig, sensibel) | [`02_testfaelle.md`](02_testfaelle.md) | fertig vorbereitet |
-| 3 | Testprotokoll (Soll, Prüfkriterien, Felder für echte Beobachtungen) | [`03_testprotokoll.md`](03_testprotokoll.md) | **muss nach dem Durchlauf ausgefüllt werden** |
+| 1 | System-Prompt (direkt in Claude / Langdock einsetzbar) | [`01_system-prompt.md`](01_system-prompt.md) | fertig, **v1.2** |
+| 2 | Drei Testfälle (Standard, unvollständig, sensibel) | [`02_testfaelle.md`](02_testfaelle.md) | ausgeführt |
+| 3 | Testprotokoll (Soll, Prüfkriterien, Felder für echte Beobachtungen) | [`03_testprotokoll.md`](03_testprotokoll.md) | ausgefüllt (11 Läufe, v1.0 → v1.2) |
 | 4 | Grenzen des Assistenten | [`04_grenzen.md`](04_grenzen.md) | fertig |
 | 5 | Video-Drehbuch (Deutsch, max. 7 Minuten) | [`05_video-drehbuch.md`](05_video-drehbuch.md) | fertig, Aufnahme steht noch aus |
 | 6 | Workshop-Konzept 90 Minuten (eine Seite) | [`06_workshop-konzept.md`](06_workshop-konzept.md) | fertig |
 | 7 | Erfolgsmessung: KPIs und Evaluation nach 4 Wochen | [`07_erfolgsmessung.md`](07_erfolgsmessung.md) | fertig |
 
-> **Transparenzhinweis:** Die drei Tests sind **vorbereitete Testfälle**. Sie wurden noch **nicht** in Claude oder Langdock ausgeführt.
-> Die Spalten „Ist-Ergebnis“, „Bewertung“ und „Maßnahme“ im Testprotokoll sind absichtlich leer. Sie werden erst nach dem echten Durchlauf
-> ausgefüllt, zusammen mit dem Änderungsprotokoll des Prompts (v1.0 → v1.1 …).
+> **Transparenzhinweis:** Die drei Testfälle wurden am 02.11.2026 mit Claude ausgeführt: 11 Läufe über die Prompt-Versionen
+> v1.0, v1.1 und v1.2, jeweils in einer frischen Claude-Code-Subagent-Sitzung. Das kommt einem neuen Chat nahe, ist aber **kein Lauf im
+> claude.ai-Projekt selbst**. Vor der Abgabe sollte T1–T3 einmal im echten Projekt gegengeprüft werden. Alle Ausgaben stehen wörtlich im
+> Testprotokoll, zusammen mit Bewertung und Änderungsprotokoll.
 
 ## Reihenfolge für die Fertigstellung
 
-1. Prompt v1.0 in ein Claude-Projekt oder in Langdock (Assistent mit Claude-Modell) einfügen, siehe Einrichtung in `01_system-prompt.md`.
-2. Jeden Testfall aus `02_testfaelle.md` **zweimal** in einem neuen Chat ausführen, um zu prüfen, ob die Ergebnisse gleich bleiben.
-3. Die Ergebnisse wörtlich in `03_testprotokoll.md` übernehmen und bewerten.
-4. Den Prompt anpassen, die Version hochzählen und die Änderung im Änderungsprotokoll festhalten. Die betroffenen Tests erneut ausführen.
+1. ✔ Prompt erstellt und getestet (aktuell v1.2).
+2. ✔ Testfälle ausgeführt, Ergebnisse bewertet, Prompt zweimal verbessert (`03_testprotokoll.md`).
+3. Prompt v1.2 in ein Claude-Projekt oder in Langdock (Assistent mit Claude-Modell) einfügen und T1–T3 einmal gegenprüfen. Abweichungen im Protokoll ergänzen.
+4. Optional v1.3: höchstens 3 Hinweise unter „Bitte prüfen“ strenger durchsetzen (offener Punkt aus Runde 3).
 5. Das Video nach `05_video-drehbuch.md` aufnehmen, z. B. mit Loom, und den Link in die Abgabe-Mail setzen.
 6. Abgabe-Mail mit Prompt, Testprotokoll, Video-Link und Workshop-Skizze (Teil 3 = `06` und `07`) verschicken.
 

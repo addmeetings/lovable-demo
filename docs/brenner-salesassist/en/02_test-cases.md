@@ -1,7 +1,6 @@
-# 2. Test cases (prepared, not yet run)
+# 2. Test cases
 
-> **Status:** The three cases are **prepared**. They are fictional but use realistic details from plumbing/heating (SHK) sales.
-> They have **not** yet been run in Claude/Langdock. Results are recorded in `03_test-protocol.md`.
+> **Status:** The three cases are fictional but use realistic details from plumbing/heating (SHK) sales. **Run on 2 Nov 2026** (Claude, 11 runs across v1.0–v1.2). Results and ratings are in `03_test-protocol.md`.
 > **Note:** For the actual test, paste the **German** inputs from `../02_testfaelle.md`. The English inputs below are translations for reading.
 
 **How to run:** Paste each case into a **new chat** with the assistant, word for word. Run each case **twice** to check that results are consistent.

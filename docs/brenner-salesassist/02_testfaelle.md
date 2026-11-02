@@ -1,7 +1,6 @@
-# 2. Testfälle (vorbereitet, noch nicht ausgeführt)
+# 2. Testfälle
 
-> **Status:** Die drei Fälle sind **vorbereitet**. Sie sind fiktiv, enthalten aber realistische Angaben aus dem SHK-Vertrieb.
-> Sie wurden **noch nicht** in Claude/Langdock ausgeführt. Die Ergebnisse werden in `03_testprotokoll.md` festgehalten.
+> **Status:** Die drei Fälle sind fiktiv, enthalten aber realistische Angaben aus dem SHK-Vertrieb. **Ausgeführt am 02.11.2026** (Claude, 11 Läufe über v1.0–v1.2). Ergebnisse und Bewertung stehen in `03_testprotokoll.md`.
 
 **Durchführung:** Jeden Fall in einem **neuen Chat** mit dem Assistenten einfügen, wörtlich wie unten angegeben. Jeden Fall **2×** ausführen, um zu prüfen, ob die Ergebnisse gleich bleiben.
 
