@@ -4,6 +4,8 @@
 **Aufgabe:** Praktische Aufgabe *AI Enablement Consultant* (DECAID)
 **Gewählter Anwendungsfall:** Nachfassmail zu einem offenen Angebot
 
+> 🇬🇧 English version: [`en/README.md`](en/README.md)
+
 ## Worum es geht
 
 Drei Ergebnisse stehen im Mittelpunkt:
