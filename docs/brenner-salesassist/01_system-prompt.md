@@ -176,4 +176,4 @@ ein und gib wieder das vollständige AUSGABEFORMAT aus.
 | Floskel-Verbotsliste und Wortgrenzen | Das sind die typischen Schwachstellen von KI-Texten. So wird der Stil messbar (siehe Testprotokoll). |
 | Sensible Fälle mit Eskalationshinweis | Für Kundenbeziehungen ist es wichtiger, keinen Fehler zu machen, als schnell zu sein. Die Vertriebsleitung bleibt im Boot. |
 
-> Diese Entscheidungen waren **Hypothesen vor dem Test**. Der Testlauf am 02.11.2026 (`03_testprotokoll.md`) hat die geschäftskritischen Regeln in allen 11 Läufen bestätigt. Die Regeln zu Einheitlichkeit und Stil wurden in v1.1 und v1.2 nachgeschärft.
+> Diese Entscheidungen waren **Hypothesen vor dem Test**. Der Testlauf am 02.11.2026 (`03_testprotokoll.md`) hat die geschäftskritischen Regeln in allen 15 Läufen bestätigt. Die Regeln zu Einheitlichkeit und Stil wurden in v1.1 bis v1.3 nachgeschärft.

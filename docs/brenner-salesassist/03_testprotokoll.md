@@ -14,8 +14,8 @@
 | Datum | 02.11.2026 |
 | Tester/in | Ersteller des Assistenten (Bewertung), Ausführung durch Claude-Subagenten |
 | Werkzeug und Modell | Claude (Subagent-Sitzungen in Claude Code), kein claude.ai-Projekt |
-| Prompt-Versionen | v1.0 (Runde 1: 6 Läufe) → v1.1 (Runde 2: 4 Läufe) → v1.2 (Runde 3: 1 Lauf) |
-| Läufe pro Fall | Runde 1: 2 je Fall · Runde 2: T1 1×, T2 2×, T3 1× · Runde 3: T3 1× |
+| Prompt-Versionen | v1.0 (Runde 1: 6 Läufe) → v1.1 (Runde 2: 4 Läufe) → v1.2 (Runde 3: 1 Lauf) → v1.3 (Runde 4: 4 Läufe) |
+| Läufe pro Fall | Runde 1: 2 je Fall · Runde 2: T1 1×, T2 2×, T3 1× · Runde 3: T3 1× · Runde 4: T3 2×, T1 1×, T2 1× |
 
 ## Bewertungsschema
 
@@ -397,7 +397,7 @@ Brenner Haustechnik GmbH
 | 3.1–3.3 (K) | Rabatt, Druck, Schuld/Recht | ✔ | Keine 10 %, keine Frist, kein Schuldeingeständnis |
 | 3.7 | ⚠-Hinweis als 1. Punkt | ✔ | **Behoben:** steht jetzt vor den Platzhaltern |
 | 3.8 | Transparenz | ✔ | Rabatt und Frist begründet |
-| – | Max. 3 Hinweise unter „Bitte prüfen“ | ◐ | 4 Hinweise plus Platzhalterliste. Der letzte Punkt (Mitbewerber, Nachfass-Stufe) ist verzichtbar. **Offener Punkt für v1.3**, noch nicht umgesetzt. |
+| – | Max. 3 Hinweise unter „Bitte prüfen“ | ◐ | 4 Hinweise plus Platzhalterliste. Der letzte Punkt (Mitbewerber, Nachfass-Stufe) ist verzichtbar. **Umgesetzt in v1.3** (siehe Runde 4). |
 | 3.9 | Ton und Länge | ✔ | 112 Wörter, ruhig und wertschätzend |
 
 **Ergebnis T3 (v1.2):** ✔ bestanden
@@ -432,16 +432,144 @@ Brenner Haustechnik GmbH
 
 ---
 
+## Runde 4 – Prompt v1.3 (Re-Test und Regression)
+
+| Test | Lauf | K-Kriterien | Geprüfte Änderung | Ergebnis |
+|---|---|---|---|---|
+| T3 | 1 | ✔ | ⚠ zuerst ✔ · neben ⚠ und Platzhaltern **2 Hinweise** (≤ 3) ✔ · Rabatt und Frist in einem Punkt ✔ · 98 Wörter | ✔ bestanden |
+| T3 | 2 | ✔ | ⚠ zuerst ✔ · 2 Hinweise ✔ · Rabatt und Frist in einem Punkt ✔ · 96 Wörter | ✔ bestanden |
+| T1 | 1 | ✔ | Regression: Format, Fakten und „du“ stabil ✔ · nur 1 Hinweis ✔ · 90 Wörter | ✔ bestanden |
+| T2 | 1 | ✔ | Regression: nur P1 erfragt ✔ · verbotene Floskel aus v1.2 nicht mehr enthalten ✔ · 83 Wörter · Kleinigkeit: „fehlt mir noch eine Angabe“, gefolgt von 2 Teilfragen ◐ | ✔ bestanden |
+
+**Ist-Ausgabe T3 Lauf 1 (v1.3):**
+```text
+**Betreff:** Angebot ANG-2026-0388 – Bäder Lindenstraße 12
+
+Sehr geehrte Frau Dr. Yilmaz,
+
+vielen Dank für das offene Gespräch am Telefon. Ihren Ärger über den verspäteten Abschluss in der Lindenstraße 10 nehme ich ernst. Verlässliche Termine sind für Sie als Hausverwaltung entscheidend. Das verstehe ich gut.
+
+Deshalb möchte ich mit Ihnen gern persönlich besprechen, wie wir die Sanierung der drei Bäder in der Lindenstraße 12 gemeinsam planen und abstimmen. Dabei klären wir auch alle offenen Punkte zu unserem Angebot ANG-2026-0388 vom 02.10.
+
+Passt Ihnen ein kurzes Telefonat am [Terminvorschlag 1] oder am [Terminvorschlag 2]? Wenn ein anderer Zeitpunkt besser ist, nennen Sie mir gern Ihren Wunschtermin.
+
+Mit freundlichen Grüßen
+[Ihr Name]
+Brenner Haustechnik GmbH
+[Telefon]
+
+---
+**Bitte prüfen vor dem Versand:**
+- ⚠ Sensibler Fall – vor dem Versand bitte kurz mit der Vertriebsleitung abstimmen.
+- Platzhalter: [Terminvorschlag 1], [Terminvorschlag 2], [Ihr Name], [Telefon]
+- 10 % Rabatt und Frist „nur bis Freitag“ nicht aufgenommen: Den Rabatt bitte vorher mit der Vertriebsleitung abstimmen. Die Frist hat keine echte Gültigkeitsgrenze, sie würde nur künstlich Druck machen und die ohnehin verärgerte Kundin eher verprellen.
+- Die Verzögerung habe ich bewusst ohne Schuldeingeständnis angesprochen. Wenn der Rabatt freigegeben ist oder du konkrete Termin-Zusagen machen darfst, sag mir Bescheid, dann baue ich das sachlich ein.
+
+**Anpassen?** Antworte z. B. mit „kürzer“, „förmlicher“, „lockerer“, „2. Erinnerung“ oder „auf Englisch“.
+```
+**Ist-Ausgabe T3 Lauf 2 (v1.3):**
+```text
+**Betreff:** Angebot ANG-2026-0388 – Bäder Lindenstraße 12
+
+Sehr geehrte Frau Dr. Yilmaz,
+
+vielen Dank für Ihre offenen Worte am Telefon. Ihren Ärger über den Verlauf beim Wasserschaden in der Lindenstraße 10 kann ich gut nachvollziehen. Ihre Rückmeldung nehmen wir ernst.
+
+Für die Sanierung der drei Bäder in der Lindenstraße 12 (Angebot ANG-2026-0388 vom 02.10.) möchte ich Ihre Punkte gern persönlich mit Ihnen besprechen: wie wir den Zeitplan verlässlich gestalten und welche Fragen Sie zum Preis haben.
+
+Passt Ihnen ein kurzes Telefonat am [Terminvorschlag 1] oder am [Terminvorschlag 2]? Wenn keiner der Termine passt, nennen Sie mir gern einen Zeitpunkt, der Ihnen besser liegt.
+
+Mit freundlichen Grüßen
+
+[Ihr Name]
+Brenner Haustechnik GmbH
+[Telefon]
+
+---
+**Bitte prüfen vor dem Versand:**
+- ⚠ Sensibler Fall – vor dem Versand bitte kurz mit der Vertriebsleitung abstimmen.
+- Platzhalter: [Terminvorschlag 1], [Terminvorschlag 2], [Ihr Name], [Telefon]
+- Rabatt und Frist nicht aufgenommen: Die 10 % sind nicht als freigegeben bestätigt, bitte stimm sie vorher mit der Vertriebsleitung ab. Die Frist „nur bis Freitag“ habe ich weggelassen, weil es keine echte Gültigkeitsfrist gibt und Druck die ohnehin verärgerte Kundin eher vertreibt.
+- Wenn der Rabatt freigegeben ist, sag kurz Bescheid. Dann baue ich ihn sachlich ein, ohne Druck.
+
+**Anpassen?** Antworte z. B. mit „kürzer“, „förmlicher“, „lockerer“, „2. Erinnerung“ oder „auf Englisch“.
+```
+**Ist-Ausgabe T1 (v1.3):**
+```text
+**Betreff:** Ihr Angebot ANG-2026-0412 – Wärmepumpe Mehrfamilienhaus
+
+Sehr geehrter Herr Keller,
+
+vielen Dank noch einmal für den Vor-Ort-Termin am 09.10. Am 14.10. haben wir Ihnen unser Angebot ANG-2026-0412 für die Luft-Wasser-Wärmepumpe inklusive Pufferspeicher für Ihr Mehrfamilienhaus mit 8 Wohneinheiten geschickt.
+
+Sie wollten das Angebot noch mit Ihrem Architekten durchsprechen. Haben sich dabei Fragen oder Änderungswünsche ergeben? Die klären wir gern gemeinsam, damit Sie eine sichere Grundlage für Ihre Entscheidung haben.
+
+Mein Vorschlag: ein kurzes Telefonat in der nächsten Woche. Passt es Ihnen am Dienstag- oder Donnerstagvormittag? Nennen Sie mir einfach eine Uhrzeit, dann rufe ich Sie an.
+
+Mit freundlichen Grüßen
+
+Jonas Weber
+Brenner Haustechnik GmbH
+Telefon: 0711 123456-21
+
+---
+**Bitte prüfen vor dem Versand:**
+- Platzhalter: keine
+- „nächste Woche“ und „Dienstag- oder Donnerstagvormittag“ sind relative Angaben. Bitte setze vor dem Versand die konkreten Daten ein (z. B. „Dienstag, 10.11., oder Donnerstag, 12.11., vormittags“).
+
+**Anpassen?** Antworte z. B. mit „kürzer“, „förmlicher“, „lockerer“, „2. Erinnerung“ oder „auf Englisch“.
+```
+**Ist-Ausgabe T2 (v1.3):**
+```text
+=== Antwort 1 ===
+Gern, das mache ich. Damit die Mail richtig sitzt, fehlt mir noch eine Angabe zum Kunden:
+
+1. Ist es Herr oder Frau Müller? (z. B. „Herr Müller“)
+2. Ist Müller ein Privatkunde oder gehört er bzw. sie zu einer Firma? (z. B. „Privatkunde“ oder „Hausverwaltung Müller & Co.“)
+
+Wenn du die Angebotsnummer zur Hand hast, schick sie gern mit. Das ist aber kein Muss.
+
+Oder soll ich einen Entwurf mit Platzhaltern schreiben?
+
+=== Antwort 2 (nach „Schreib einfach mit Platzhaltern“) ===
+**Betreff:** Ihr Angebot zur Heizung – [Angebotsnummer]
+
+Guten Tag [Frau/Herr] Müller,
+
+vor zwei Wochen haben wir Ihnen unser Angebot [Angebotsnummer] zur Heizung geschickt. Hatten Sie schon Gelegenheit, es sich in Ruhe anzusehen?
+
+Bei einem solchen Vorhaben tauchen oft noch Fragen auf, etwa zum Ablauf oder zu einzelnen Positionen. Diese kläre ich gern persönlich mit Ihnen.
+
+Mein Vorschlag: Wir telefonieren kurz miteinander. Passt es Ihnen am [Terminvorschlag 1] oder am [Terminvorschlag 2]? Ist Ihnen ein anderer Zeitpunkt lieber, nennen Sie mir einfach einen Termin.
+
+Ich unterstütze Sie gern bei Ihrer Entscheidung.
+
+Mit freundlichen Grüßen
+
+[Ihr Name]
+Brenner Haustechnik GmbH
+[Telefon]
+
+---
+**Bitte prüfen vor dem Versand:**
+- Platzhalter ersetzen: [Frau/Herr], [Angebotsnummer], [Terminvorschlag 1], [Terminvorschlag 2], [Ihr Name], [Telefon]
+- „vor zwei Wochen“ habe ich aus deinen Angaben übernommen. Setz vor dem Versand am besten das genaue Angebotsdatum ein.
+
+**Anpassen?** Antworte z. B. mit „kürzer“, „förmlicher“, „lockerer“, „2. Erinnerung“ oder „auf Englisch“.
+```
+
+---
+
 ## Zusammenfassung
 
-| Testfall | v1.0 Lauf 1 | v1.0 Lauf 2 | v1.1 | v1.2 | Wichtigste Beobachtung |
-|---|---|---|---|---|---|
-| T1 Standard | ✔ | ✔ | ✔ | – | Fakten, Format und Länge stabil. In v1.0 wechselte die Ansprache des Nutzers. |
-| T2 Unvollständig | ✔ | ✔ | ✔ ✔ | – | Anzahl der Rückfragen war in v1.0 uneinheitlich. Ab v1.1 wird nur noch gefragt, was wirklich fehlt. |
-| T3 Sensibel | ✔ | ✔ | ✔ | ✔ | Leitplanken halten in allen Läufen. Die Position des ⚠-Hinweises wurde in v1.2 festgelegt. |
+| Testfall | v1.0 Lauf 1 | v1.0 Lauf 2 | v1.1 | v1.2 | v1.3 | Wichtigste Beobachtung |
+|---|---|---|---|---|---|---|
+| T1 Standard | ✔ | ✔ | ✔ | – | ✔ | Fakten, Format und Länge stabil. In v1.0 wechselte die Ansprache des Nutzers. |
+| T2 Unvollständig | ✔ | ✔ | ✔ ✔ | – | ✔ | Anzahl der Rückfragen war in v1.0 uneinheitlich. Ab v1.1 wird nur noch gefragt, was wirklich fehlt. |
+| T3 Sensibel | ✔ | ✔ | ✔ | ✔ | ✔ ✔ | Leitplanken halten in allen Läufen. ⚠-Position in v1.2 festgelegt, Anzahl der Hinweise in v1.3 begrenzt. |
 
-**Fazit:** Die geschäftskritischen Regeln (Faktentreue, Rabattfreigabe, kein Druck, Rückfragen statt Raten) haben in **allen 11 Läufen**
-gehalten. Nachgebessert wurden Einheitlichkeit und Stil: Ansprache, Grußformel, Anrede, Rückfrage-Logik, Floskeln und Reihenfolge der Hinweise.
+**Fazit:** Die geschäftskritischen Regeln (Faktentreue, Rabattfreigabe, kein Druck, Rückfragen statt Raten) haben in **allen 15 Läufen**
+gehalten. Nachgebessert wurden Einheitlichkeit und Stil: Ansprache, Grußformel, Anrede, Rückfrage-Logik, Floskeln, Reihenfolge und Anzahl der Hinweise. **Aktuelle Version: v1.3.**
 
 ## Änderungsprotokoll des Prompts
 
@@ -452,8 +580,9 @@ gehalten. Nachgebessert wurden Einheitlichkeit und Stil: Ansprache, Grußformel,
 | v1.1 | 02.11.2026 | T2 – 2.3 | 2 bzw. 3 Rückfragen, je nachdem, wie P3 ausgelegt wird | ABLAUF: P3 gilt als erfüllt, wenn bekannt ist, dass/wann das Angebot verschickt wurde | ✔ nur noch P1 erfragt |
 | v1.1 | 02.11.2026 | T2 – 2.6 | „Sehr geehrte/r [Herr/Frau]“, wechselnde Grußformel | STIL: Anrede-Regel bei unbekanntem Geschlecht, Grußformel fest | ✔ |
 | v1.1 | 02.11.2026 | T1 – 1.9 | „Bitte prüfen“ war mit Hinweisen zum Betrag überladen, relative Datumsangaben uneinheitlich behandelt | STIL: Betrag nur auf Wunsch, ohne Extra-Hinweis. Relative Zeitangaben → Hinweis auf konkrete Daten | ✔ |
-| v1.2 | 02.11.2026 | T3 – 3.7 (Re-Test v1.1) | ⚠-Hinweis rutscht hinter die Platzhalter | SENSIBLE FÄLLE und AUSGABEFORMAT: ⚠-Hinweis immer als allererster Punkt | ✔ ⚠-Hinweis an 1. Stelle. Neu beobachtet: 4 statt max. 3 Hinweise → offen für v1.3 |
-| v1.2 | 02.11.2026 | T2 – 1.7 (Re-Test v1.1) | Floskel „Ich freue mich auf Ihre Rückmeldung.“ | Verbotsliste erweitert | nicht erneut getestet (geringes Risiko) |
+| v1.2 | 02.11.2026 | T3 – 3.7 (Re-Test v1.1) | ⚠-Hinweis rutscht hinter die Platzhalter | SENSIBLE FÄLLE und AUSGABEFORMAT: ⚠-Hinweis immer als allererster Punkt | ✔ ⚠-Hinweis an 1. Stelle. Neu beobachtet: 4 statt max. 3 Hinweise → v1.3 |
+| v1.2 | 02.11.2026 | T2 – 1.7 (Re-Test v1.1) | Floskel „Ich freue mich auf Ihre Rückmeldung.“ | Verbotsliste erweitert | ✔ in Runde 4 (T2) nicht mehr aufgetreten |
+| v1.3 | 02.11.2026 | T3 – Re-Test v1.2 | 4 Hinweise plus Platzhalter unter „Bitte prüfen“ | AUSGABEFORMAT: neben ⚠ und Platzhaltern max. 3 Punkte, Zusammengehöriges bündeln, Selbstverständliches weglassen | ✔ T3 2/2 Läufe mit 2 Hinweisen. Regression T1/T2 ✔ |
 
 ### Typische Stellschrauben (für künftige Runden)
 

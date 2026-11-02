@@ -178,4 +178,4 @@ and output the complete OUTPUT FORMAT again.
 | Banned phrases and word limits | These are the typical weaknesses of AI text. They make the style measurable (see test protocol). |
 | Sensitive cases with escalation note | In customer relationships, avoiding mistakes matters more than speed. Sales management stays involved. |
 
-> These decisions were **hypotheses before testing**. The test run on 2 Nov 2026 (`03_test-protocol.md`) confirmed the business-critical rules in all 11 runs. Rules on consistency and style were sharpened in v1.1 and v1.2.
+> These decisions were **hypotheses before testing**. The test run on 2 Nov 2026 (`03_test-protocol.md`) confirmed the business-critical rules in all 15 runs. Rules on consistency and style were sharpened in v1.1 to v1.3.
