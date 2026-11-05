@@ -14,6 +14,15 @@ Three outcomes matter most:
 2. **Reliable customer communication.** Every email has the same structure and tone. No facts are invented, and sensitive cases are flagged.
 3. **The team actually uses it.** Input is simple, there is a video for beginners, a workshop, and measurable KPIs.
 
+## Results at a glance (animated)
+
+The GIFs replay real test outputs from the test protocol (prompt v1.3, run on 2 Nov 2026). The text is unchanged; only the presentation is simplified. The outputs are in German.
+
+| T1 – Standard case | T2 – Incomplete input | T3 – Sensitive customer |
+|---|---|---|
+| ![T1](../gifs/T1_standardfall.gif) | ![T2](../gifs/T2_unvollstaendig.gif) | ![T3](../gifs/T3_sensibler_fall.gif) |
+| Ready to send in one step | Asks instead of guessing | No unapproved discount, no pressure, ⚠ escalation |
+
 ## Delivery package
 
 | # | Component | File | Status |
@@ -27,6 +36,8 @@ Three outcomes matter most:
 | 7 | Success measurement: KPIs and evaluation after 4 weeks | [`07_success-measurement.md`](07_success-measurement.md) | done |
 | 8 | Submission email draft (German) | [`../08_abgabe-mail.md`](../08_abgabe-mail.md) | done, video link missing |
 | – | Submission PDF (German) | [`../Brenner-SalesAssist_Abgabe.pdf`](../Brenner-SalesAssist_Abgabe.pdf) | done |
+| – | Animated results (3 GIFs) | [`../gifs/`](../gifs/) | done |
+| – | Complete submission package (ZIP) | [`../Brenner-SalesAssist_Abgabepaket.zip`](../Brenner-SalesAssist_Abgabepaket.zip) | done |
 
 > **Transparency note:** The three test cases were run on 2 Nov 2026 with Claude: 15 runs across prompt versions v1.0 to
 > v1.3, each in a fresh Claude Code subagent session. That is close to a new chat, but **not a run in the claude.ai project itself**.
@@ -38,7 +49,7 @@ Three outcomes matter most:
 2. ✔ Test cases run, results rated, prompt improved three times (`03_test-protocol.md`).
 3. Paste prompt v1.3 into a Claude project or Langdock (assistant with a Claude model) and re-check T1–T3 once. Add any differences to the protocol.
 4. Record the video following `05_video-script.md` (e.g. with Loom) and add the link to `../08_abgabe-mail.md`.
-5. Send the submission email from `../08_abgabe-mail.md` (German) with the PDF `../Brenner-SalesAssist_Abgabe.pdf` attached.
+5. Send the submission email from `../08_abgabe-mail.md` (German) with `../Brenner-SalesAssist_Abgabepaket.zip` attached (or the PDF and GIFs separately).
 
 ## Submission checklist
 

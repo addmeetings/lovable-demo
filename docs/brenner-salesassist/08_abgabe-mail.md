@@ -1,6 +1,6 @@
 # 8. Abgabe-Mail (Entwurf)
 
-> Vor dem Versand ersetzen: **[Name der Ansprechperson]**, **[Video-Link]**, **[Ihr Name]**. Als Anhang die PDF `Brenner-SalesAssist_Abgabe.pdf` beifügen.
+> Vor dem Versand ersetzen: **[Name der Ansprechperson]**, **[Video-Link]**, **[Ihr Name]**. Als Anhang `Brenner-SalesAssist_Abgabepaket.zip` beifügen (enthält PDF, 3 GIFs und den Prompt als Textdatei). Alternativ PDF und GIFs einzeln anhängen.
 
 ---
 
@@ -20,6 +20,7 @@ anbei meine Lösung zur praktischen Aufgabe. Ich habe mich für die **Nachfassma
    Kundendaten braucht es eine CRM-Anbindung.
 3. **Video (6:30 min):** [Video-Link]
 4. **Workshop-Skizze (90 min) und Erfolgsmessung nach vier Wochen:** im PDF auf einer Seite.
+5. **Ergebnisse auf einen Blick:** drei kurze GIFs im Anhang zeigen, wie der Assistent die drei Testfälle löst. Sie geben echte Testausgaben wieder: versandfertige Mail im Standardfall, Rückfrage statt Raten bei fehlenden Angaben, keine Rabattzusage und kein künstlicher Druck im heiklen Fall.
 
 **Hinweis zum Test:** Die Läufe habe ich jeweils in einer frischen Claude-Sitzung mit dem Prompt als einziger Anweisung durchgeführt. Die Ausgaben stehen wörtlich im Protokoll.
 

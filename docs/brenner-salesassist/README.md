@@ -14,6 +14,15 @@ Drei Ergebnisse stehen im Mittelpunkt:
 2. **Verlässlich mit Kunden kommunizieren.** Jede Mail hat denselben Aufbau und denselben Ton. Fakten werden nicht erfunden, sensible Fälle werden markiert.
 3. **Das Team nutzt es wirklich.** Die Eingabe ist einfach, es gibt ein Video für Einsteiger, einen Workshop und messbare KPIs.
 
+## Ergebnisse auf einen Blick (animiert)
+
+Die GIFs geben echte Testausgaben aus dem Testprotokoll wieder (Prompt v1.3, Lauf vom 02.11.2026). Der Text ist unverändert, nur die Darstellung ist vereinfacht.
+
+| T1 – Standardfall | T2 – Unvollständige Angaben | T3 – Sensibler Kundenfall |
+|---|---|---|
+| ![T1](gifs/T1_standardfall.gif) | ![T2](gifs/T2_unvollstaendig.gif) | ![T3](gifs/T3_sensibler_fall.gif) |
+| Versandfertig in einem Schritt | Fragt nach statt zu raten | Kein Rabatt ohne Freigabe, kein Druck, ⚠ Eskalation |
+
 ## Abgabepaket
 
 | # | Bestandteil | Datei | Status |
@@ -27,6 +36,8 @@ Drei Ergebnisse stehen im Mittelpunkt:
 | 7 | Erfolgsmessung: KPIs und Evaluation nach 4 Wochen | [`07_erfolgsmessung.md`](07_erfolgsmessung.md) | fertig |
 | 8 | Abgabe-Mail (Entwurf) | [`08_abgabe-mail.md`](08_abgabe-mail.md) | fertig, Video-Link fehlt |
 | – | Abgabe-PDF (Prompt, Testfälle, Protokoll, Grenzen, Workshop, KPIs) | [`Brenner-SalesAssist_Abgabe.pdf`](Brenner-SalesAssist_Abgabe.pdf) | fertig |
+| – | Animierte Ergebnisse (3 GIFs) | [`gifs/`](gifs/) | fertig |
+| – | Komplettes Abgabepaket (ZIP) | [`Brenner-SalesAssist_Abgabepaket.zip`](Brenner-SalesAssist_Abgabepaket.zip) | fertig |
 
 > **Transparenzhinweis:** Die drei Testfälle wurden am 02.11.2026 mit Claude ausgeführt: 15 Läufe über die Prompt-Versionen
 > v1.0 bis v1.3, jeweils in einer frischen Claude-Code-Subagent-Sitzung. Das kommt einem neuen Chat nahe, ist aber **kein Lauf im
@@ -39,7 +50,7 @@ Drei Ergebnisse stehen im Mittelpunkt:
 2. ✔ Testfälle ausgeführt, Ergebnisse bewertet, Prompt dreimal verbessert (`03_testprotokoll.md`).
 3. Prompt v1.3 in ein Claude-Projekt oder in Langdock (Assistent mit Claude-Modell) einfügen und T1–T3 einmal gegenprüfen. Abweichungen im Protokoll ergänzen.
 4. Video nach `05_video-drehbuch.md` aufnehmen (z. B. mit Loom) und den Link in `08_abgabe-mail.md` eintragen.
-5. Abgabe-Mail aus `08_abgabe-mail.md` mit der PDF `Brenner-SalesAssist_Abgabe.pdf` im Anhang verschicken.
+5. Abgabe-Mail aus `08_abgabe-mail.md` mit `Brenner-SalesAssist_Abgabepaket.zip` (bzw. PDF und GIFs einzeln) im Anhang verschicken.
 
 ## Abgabe-Checkliste
 
